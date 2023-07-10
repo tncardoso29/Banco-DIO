@@ -7,6 +7,7 @@ public class ContaTerminal {
 
 	public static void main(String[] args) {
 		
+		// Quando for coletar informações de teclado.. Sempre utilizar o "Scanner";
 		Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 		
 		System.out.println();
@@ -25,14 +26,15 @@ public class ContaTerminal {
 		System.out.println("Ok... Qual o valor para saque? ");
 		double saque = scanner.nextDouble();
 		
-		// dsdsadsadsadasd
-		if(numeroAgencia == 1021) {
+		/* Caso o número da agência e da conta estejam certos.. ai teremos os dados do cliênte
+		 * sendo impressos a baixo */
+		if(numeroAgencia == 1021 & conta == 602240) {
 			System.out.println();
 			System.out.println("\nOlá " + nome + ", Obrigado(a) por criar uma conta em nosso banco"
 					+ ", sua agência é: " + numeroAgencia + ", conta: " + conta +
 					", e seu saldo " + saque + " já está disponível para saque!!");
 			System.out.println();
-		} else {
+		} else { // Agora caso não... Já era!!
 			System.out.println();
 			System.out.println("Olá " + nome + ", as informações digitadas não conferem," + 
 				" lamentamos o inconviniente!!");
